@@ -13,7 +13,9 @@ export default function AddClipForm() {
         setSending(true);
         let result = await postClip(text(), reciever());      
         if (result) {
-           refetchClips(); 
+            setText("");
+            setReciever("");
+            refetchClips(); 
         }
         setError(!result);
         setSending(false);
