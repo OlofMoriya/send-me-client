@@ -4,7 +4,7 @@ import { postClip, useClips } from "~/stores/clips_store";
 export default function AddClipForm() {
     const [_, refetchClips] = useClips() as [any, any];
     const [text, setText] = createSignal("");
-    const [reciever, setReciever] = createSignal<string | undefined>(undefined);
+    const [reciever, setReciever] = createSignal<string>("");
     const [sending, setSending] = createSignal(false);
     const [error, setError] = createSignal(false);
     const sendAction = async () => {

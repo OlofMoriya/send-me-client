@@ -8,7 +8,7 @@ export default function Clips() {
         <div>
             <Suspense fallback={<div>loading...</div>}>
                 <For each={clips()}>
-                    {clip => <Clip text={clip.text} user={clip.user} date={clip.date}/>}
+                    {clip => <Clip clip={clip}/>}
                 </For>
             </Suspense>
         </div>
